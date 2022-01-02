@@ -5,13 +5,15 @@ using UnityEditor;
 #endif
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class UIManager : MonoBehaviour
 {
-    
+    public TMP_InputField nameInput;
 
     public void StartGame()
     {
+        DataManager.Instance.playerName = nameInput.text;
         SceneManager.LoadScene(1);
     }
 

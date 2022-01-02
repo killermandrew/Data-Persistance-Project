@@ -15,6 +15,7 @@ public class HighScore : MonoBehaviour
 
     public void UpdateHighScore()
     {
+        DataManager.Instance.LoadScore();
         highScoreText.text = "High Score: " + DataManager.Instance.highScoreName + 
             " - " + DataManager.Instance.highScore;
     }
